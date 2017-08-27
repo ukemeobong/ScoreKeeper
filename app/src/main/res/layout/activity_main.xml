@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context="com.example.ukemeobong.scorekeeper.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/nigeria"
+                android:layout_width="175dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/Nigeria"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="30sp"
+                android:textColor="#616161"
+                android:layout_marginLeft="65dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/argentina"
+                android:layout_width="175dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginEnd="22dp"
+                android:text="@string/Argentina"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="30sp"
+                android:textColor="#616161"
+                android:layout_marginLeft="38dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end"
+                android:layout_alignParentRight="true" />
+
+
+            <ImageView
+                android:id="@+id/nigerianflag"
+                android:src="@drawable/nigerianflag"
+                android:layout_width="155dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp"
+                android:layout_below="@id/nigeria"/>
+
+            <ImageView
+                android:id="@+id/argentinaflag"
+                android:src="@drawable/argentinaflag"
+                android:layout_width="155dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/argentina"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/nigeria_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/nigerianflag"
+                android:paddingRight="4dp"/>
+
+            <ImageView
+                android:id="@+id/nigeria_goal"
+                android:src="@drawable/goal"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="148dp"
+                android:layout_toRightOf="@+id/nigeria_score"
+                android:layout_toEndOf="@+id/nigeria_score"
+                android:layout_marginRight="55dp"
+                android:layout_marginEnd="35dp"/>
+
+            <TextView
+                android:id="@+id/argentina_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/argentinaflag"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="114dp"/>
+
+            <ImageView
+                android:id="@+id/argentina_goal"
+                android:src="@drawable/goal"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="148dp"
+                android:layout_toRightOf="@+id/argentina_score"
+                android:layout_toEndOf="@+id/argentina_score"
+                android:layout_marginLeft="-112dp"
+                android:layout_marginRight="114dp"/>
+
+            <TextView
+                android:text="50&#37;"
+                android:id="@+id/nigeria_possession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/nigeria_score"
+                android:layout_marginBottom="8dp"/>
+
+
+            <TextView
+                android:id="@+id/argentina_possession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="50&#37;"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/argentina_score"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="92dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/nigeria_offside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/nigeria_possession"
+                android:layout_marginBottom="6dp"
+                android:paddingRight="6dp"/>
+
+            <ImageView
+                android:id="@+id/nigeria_whistle"
+                android:src="@drawable/whistle"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="242dp"
+                android:layout_toRightOf="@+id/nigeria_offside"
+                android:layout_toEndOf="@+id/nigeria_offside"
+                android:layout_marginRight="60dp" />
+
+            <TextView
+                android:id="@+id/argentina_offside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/argentina_possession"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="118dp"
+                android:layout_marginBottom="6dp" />
+
+            <ImageView
+                android:id="@+id/argentina_whistle"
+                android:src="@drawable/whistle"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="244dp"
+                android:layout_toRightOf="@+id/argentina_offside"
+                android:layout_toEndOf="@+id/argentina_offside"
+                android:layout_marginLeft="-112dp"
+                android:layout_marginRight="114dp"/>
+
+
+            <TextView
+                android:id="@+id/nigeria_yellow_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/nigeria_offside"
+                android:layout_marginBottom="6dp"
+                android:paddingRight="6dp"/>
+
+            <ImageView
+                android:id="@+id/nigeria_yellowcard"
+                android:src="@drawable/yellowcard"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="288dp"
+                android:layout_toRightOf="@+id/nigeria_yellow_card"
+                android:layout_toEndOf="@+id/nigeria_yellow_card"
+                android:layout_marginRight="55dp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:id="@+id/argentina_yellow_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/argentina_offside"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="118dp"
+                android:layout_marginBottom="6dp"/>
+
+            <ImageView
+                android:id="@+id/argentina_yellowcard"
+                android:src="@drawable/yellowcard"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="288dp"
+                android:layout_toRightOf="@+id/argentina_offside"
+                android:layout_toEndOf="@+id/argentina_offside"
+                android:layout_marginLeft="-112dp"
+                android:layout_marginRight="114dp"/>
+
+
+            <TextView
+                android:id="@+id/nigeria_red_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/nigeria_yellow_card"
+                android:paddingRight="6dp"/>
+
+            <ImageView
+                android:id="@+id/nigeria_redcard"
+                android:src="@drawable/redcard"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="330dp"
+                android:layout_toRightOf="@+id/nigeria_red_card"
+                android:layout_toEndOf="@+id/nigeria_red_card"
+                android:layout_marginRight="55dp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:id="@+id/argentina_red_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/argentina_yellow_card"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="118dp" />
+
+            <ImageView
+                android:id="@+id/argentina_redcard"
+                android:src="@drawable/redcard"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="330dp"
+                android:layout_toRightOf="@+id/argentina_red_card"
+                android:layout_toEndOf="@+id/argentina_red_card"
+                android:layout_marginLeft="-112dp"
+                android:layout_marginRight="114dp"/>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/stadium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stadium" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+        <Button
+            android:id="@+id/nigeria_nets"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_margin="20dp"
+            android:text="Goals"
+            android:layout_marginBottom="10dp"
+            android:onClick="addGoalForNigeria"/>
+
+        <Button
+            android:id="@+id/argentina_nets"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Goals"
+            android:onClick="addGoalForArgentina"/>
+
+        <Button
+            android:id="@+id/nigerian_possession"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_margin="20dp"
+            android:text="Possession"
+            android:layout_below="@id/nigeria_nets"
+            android:onClick="addPossessionForNigeria"/>
+
+        <Button
+            android:id="@+id/argentine_possession"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Possession"
+            android:layout_below="@id/argentina_nets"
+            android:onClick="addPossessionForArgentina"/>
+
+        <Button
+            android:id="@+id/nigerian_offside"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_margin="20dp"
+            android:text="Offside"
+            android:layout_below="@id/nigerian_possession"
+            android:onClick="addOffsideForNigeria"/>
+
+        <Button
+            android:id="@+id/argentine_offside"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Offside"
+            android:layout_below="@id/argentine_possession"
+            android:onClick="addOffsideForArgentina"/>
+
+        <Button
+            android:id="@+id/nigerian_yellowcard"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_margin="20dp"
+            android:text="Yellow Card"
+            android:layout_below="@id/nigerian_offside"
+            android:onClick="addYellowcardForNigeria"/>
+
+        <Button
+            android:id="@+id/argentine_yellowcard"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Yellow Card"
+            android:layout_below="@id/argentine_offside"
+            android:onClick="addYellowcardForArgentina"/>
+
+        <Button
+            android:id="@+id/nigerian_redcard"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_margin="20dp"
+            android:text="Red Card"
+            android:layout_below="@id/nigerian_yellowcard"
+            android:onClick="addRedcardForNigeria"/>
+
+        <Button
+            android:id="@+id/argentine_redcard"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Red Card"
+            android:layout_below="@id/argentine_yellowcard"
+            android:onClick="addRedcardForArgentina"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Reset"
+            android:onClick="resetScore"/>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

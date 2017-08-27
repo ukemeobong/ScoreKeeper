@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+
+    <string name="percent_sign">0&#37;;</string>
+
+    <string name="Nigeria">Nigeria</string>
+
+    <string name="Argentina">Argentina</string>
+
+    <string name="Nigeria_score">0</string>
+
+    <string name="Argentina_score">0</string>
+
+    <string name="Nigeria_Possession">50</string>
+
+    <string name="Argentina_Possession">50</string>
+
+    <string name="Nigeria_Offside">0</string>
+</resources>
